@@ -6,7 +6,6 @@ export const client = createClient({
   dataset: 'production',
   projectId: 'ycxyqi2k',
   useCdn: true,
-  token: 'skCbHfd497SUOOtsTe3GlI8AzOJJP7k4UsTBzDt2Otti1EHn2kiDASXmoIxQaAZibV7kUU3rX9bowKdiWhGAC7Lzlfd0lXu0qx3lnXCl1PzcJPXweebsPpiZyWf9bOTudP58f84xjDt0MdstxTpYIKWvhLZcBmNLXebCZfBOoYBqHpQwNDlf', 
 });
 
 const builder = imagerUrlBuilder(client)

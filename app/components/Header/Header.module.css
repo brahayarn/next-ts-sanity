@@ -1,0 +1,189 @@
+/* Header container styles */
+.header {
+  display: flex;
+  gap: 6rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo styling */
+/* Logo styling */
+.logo {
+  font-weight: bold;
+  color: #B90000;
+  text-align: left; /* Вирівнює текст до лівого краю */
+  font-size: 2rem; /* Розмір для "DIGITAL" */
+}
+
+.logo span {
+  display: block; /* Переносить "Construction" на новий рядок */
+  font-weight: normal; /* Легший стиль для "Construction" */
+  color: #555; /* Інший колір для "Construction", якщо потрібно */
+  font-size: 1rem; /* Менший розмір для "Construction" */
+  margin-top: -0.5rem; /* Зменшує відстань між рядками */
+}
+
+
+/* Desktop navigation styles */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  padding-bottom: 0.2rem;
+  font-weight: bold;
+}
+
+/* Active link styling */
+.activeLink {
+  color: #e63946;
+}
+
+.activeLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #e63946;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Contact button */
+.contactButton {
+  padding: 14px 24px;
+  margin-right: 10px;
+  border: 2px solid #3B35F3;
+  background-color: #3B35F3;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.contactButton.activeLink {
+  background-color: #e63946;
+}
+
+/* Mobile menu button */
+.mobileMenuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .contactButton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem;
+    transform: translateY(-100%);
+    box-shadow: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .navClosed {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+    margin-right: auto; /* Зсуває кнопку до лівого краю */
+    font-size: 1.5rem; /* Збільшує розмір, якщо потрібно */
+  }
+
+  .logo {
+    margin: 0 80px; /* Центрує логотип */
+    text-align: center;
+    font-size: 1.5rem; /* Налаштовує розмір логотипа */
+  }
+
+  .nav a {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #333;
+  }
+
+
+  .contactButton {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    display: flex;
+    justify-content: space-between; /* Відступи між елементами */
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .mobileMenuButton {
+    display: block; /* Відображення кнопки для мобільних */
+    margin-right: auto; /* Зсув кнопки вліво */
+    font-size: 1.5rem; /* Розмір кнопки */
+    cursor: pointer; /* Вказівник у вигляді руки */
+  }
+
+  .logo {
+    margin-left: 80px; /* Центрує логотип */
+    text-align: center;
+    font-size: 1.8rem; /* Розмір логотипа */
+    color: #e63946; /* Колір логотипа */
+  }
+
+}

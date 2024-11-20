@@ -1,0 +1,42 @@
+.stats {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: -100px;
+  }
+  
+  .statItem {
+    text-align: center;
+  }
+  
+  .statItem p.value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #B90000;
+    margin: 0;
+  }
+  
+  .statItem p.label {
+    display: block; /* Кожен <p> займає весь рядок */
+    margin: 0 0 0.5rem 0; /* Додає проміжок знизу, якщо потрібен */
+    color: #555;
+  }
+
+  
+  @media (max-width: 480px) {
+    .statItem p.value {
+      margin-top: 0px;
+      font-size: 1.2rem; /* Further reduce font size on small screens */
+    }
+  
+    .statItem p.label {
+      font-size: 0.9rem; /* Further reduce font size for label */
+    }
+    .stats{
+      padding: 0 50px 10px 50px;
+      margin-top: -180px;
+    }
+  }
+  
